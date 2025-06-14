@@ -1,0 +1,249 @@
+/* ===== Base Styles ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background: #fff;
+    color: #222;
+}
+
+.dark-mode {
+    background: #111;
+    color: #eee;
+}
+
+/* ===== Header & Nav ===== */
+header {
+    background: #0477a1;
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+nav .active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 2rem;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* ===== About Section ===== */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.about-img:hover {
+    transform: scale(1.03);
+}
+
+.about-text {
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-top: 70px;
+}
+
+/* ===== Skills Rating Bars ===== */
+.skills-rating {
+    padding: 2rem;
+    margin-bottom: 60px;
+}
+
+.skill {
+    margin-bottom: 1.2rem;
+}
+
+.skill label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.bar {
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 22px;
+}
+
+.bar div {
+    height: 100%;
+    background: #007acc;
+    color: #fff;
+    text-align: right;
+    padding-right: 8px;
+    font-size: 13px;
+    line-height: 22px;
+    transition: width 0.5s ease-in-out;
+}
+
+.dark-mode .bar {
+    background: #444;
+}
+
+.dark-mode .bar div {
+    background: #00bcd4;
+}
+
+/* ===== Projects ===== */
+.skill-list,
+.edu-entry,
+.project-card,
+.contact-info {
+    margin-bottom: 1.5rem;
+}
+
+.projects {
+    margin-bottom: 70px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 1.2rem;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: #f1f1f1;
+}
+
+.dark-mode .project-card {
+    background: #222;
+    border: 1px solid #444;
+}
+
+.dark-mode .project-card:hover {
+    background: #2c2c2c;
+}
+
+/* ===== Forms ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+form button {
+    padding: 0.6rem;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0477a1;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+/* ===== Dark Mode Header/Footer ===== */
+.dark-mode header,
+.dark-mode footer {
+    background: #000;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Responsive Design ===== */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .about-text {
+        margin-left: 2rem;
+    }
+}
