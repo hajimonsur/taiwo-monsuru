@@ -1,4 +1,4 @@
-/* ===== Base Styles ===== */
+/* Base Styles  */
 * {
     box-sizing: border-box;
 }
@@ -20,7 +20,7 @@ body {
     color: #eee;
 }
 
-/* ===== Header & Nav ===== */
+/*  Header & Nav  */
 header {
     background: #0477a1;
     color: white;
@@ -58,13 +58,23 @@ nav .active {
     text-decoration: underline;
 }
 
-/* ===== Sections ===== */
+a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00bcd4;
+}
+
+/*  Sections  */
 section {
     padding: 2rem;
     animation: fadeIn 0.8s ease-in;
 }
 
-/* ===== About Section ===== */
+/* About Section  */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -95,10 +105,12 @@ section {
     margin-top: 70px;
 }
 
-/* ===== Skills Rating Bars ===== */
+/*  Skills Rating Bars  */
 .skills-rating {
     padding: 2rem;
     margin-bottom: 60px;
+    animation: fadeIn 0.8s ease-in;
+   
 }
 
 .skill {
@@ -137,7 +149,7 @@ section {
     background: #00bcd4;
 }
 
-/* ===== Projects ===== */
+/*  Projects  */
 .skill-list,
 .edu-entry,
 .project-card,
@@ -172,7 +184,7 @@ section {
     background: #2c2c2c;
 }
 
-/* ===== Forms ===== */
+/*  Forms  */
 form {
     display: flex;
     flex-direction: column;
@@ -202,7 +214,7 @@ form button:hover {
     background: #555;
 }
 
-/* ===== Footer ===== */
+/*  Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -215,13 +227,17 @@ footer {
     margin-top: 30px;
 }
 
-/* ===== Dark Mode Header/Footer ===== */
+/* Dark Mode Header/Footer  */
 .dark-mode header,
-.dark-mode footer {
+.dark-mode footer{
     background: #000;
 }
 
-/* ===== Animations ===== */
+.dark-mode a {
+    color: #ffff;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -234,7 +250,7 @@ footer {
     }
 }
 
-/* ===== Responsive Design ===== */
+/*  Responsive Design  */
 @media (min-width: 768px) {
     .about-content {
         flex-direction: row;
@@ -246,4 +262,14 @@ footer {
     .about-text {
         margin-left: 2rem;
     }
+
+
+    
+}
+@media (max-width: 600px) {
+    nav {
+            flex-direction: column;
+            align-items: center;
+        }
+
 }
